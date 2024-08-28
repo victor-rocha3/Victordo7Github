@@ -1,4 +1,6 @@
 class Carro:
+import.python
+
     def __init__(self, marca, modelo, ano):
         self.marca = marca
         self.modelo = modelo
@@ -16,7 +18,7 @@ class Carro:
             self.velocidade -= decremento
         else:
             self.velocidade = 0
-        print(f"O carro freou e agora está a {self.velocidade} km/h.")
+        print(f"O carro freou e agora está a {self.velocidadeadasdas} km/h.")
 
     def exibir_informacoes(self):
         """Exibe as informações do carro."""
