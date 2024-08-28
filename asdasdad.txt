@@ -1,0 +1,40 @@
+class Carro:
+    def __init__(self, marca, modelo, ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+        self.velocidade = 0  
+
+    def acelerar(self, incremento):
+        """Aumenta a velocidade do carro."""
+        self.velocidade += incremento
+        print(f"O carro acelerou e agora está a {self.velocidade} km/h.")
+
+    def frear(self, decremento):
+        """Diminui a velocidade do carro."""
+        if self.velocidade >= decremento:
+            self.velocidade -= decremento
+        else:
+            self.velocidade = 0
+        print(f"O carro freou e agora está a {self.velocidade} km/h.")
+
+    def exibir_informacoes(self):
+        """Exibe as informações do carro."""
+        print(self)
+
+    def __str__(self):
+        """Retorna uma representação em string do carro."""
+        return (f"Carro:\n"
+                f"Marca: {self.marca}\n"
+                f"Modelo: {self.modelo}\n"
+                f"Ano: {self.ano}\n"
+                f"Velocidade atual: {self.velocidade} km/h")
+
+
+meu_carro = Carro("Ford", "Mustang", 2024)
+print(meu_carro)  
+meu_carro.acelerar(50)
+meu_carro.frear(20)
+print(meu_carro)  
+
+ 
